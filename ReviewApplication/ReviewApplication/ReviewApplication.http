@@ -1,0 +1,6 @@
+@ReviewApplication_HostAddress = http://localhost:5177
+
+GET {{ReviewApplication_HostAddress}}/customer/
+Accept: application/json
+
+###
