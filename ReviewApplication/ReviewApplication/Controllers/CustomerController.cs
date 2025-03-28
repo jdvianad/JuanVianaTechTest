@@ -29,10 +29,10 @@ public class CustomerController : ControllerBase
     }
 
     [HttpPost(Name = "SaveCustomer")]
-    public async Task<Result<Customer>> Save(Customer customer)
+    public async Task<IActionResult> Save(Customer customer)
     {
         _logger.LogInformation(" Save customer execution");
-        return await _customerService.SaveCustomer(customer);
+        return Ok(await _customerService.SaveCustomer(customer));
 
     }
 }
